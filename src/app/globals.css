@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Core Canvas & Surfaces */
+  --color-bg-base: #0D0A09;
+  --color-surface-card: #16110F;
+  --color-surface-active: #1E1714;
+
+  /* Structural Borders & Hardware Rims */
+  --color-border-default: #2A211D;
+  --color-border-subtle: #1F1815;
+  --color-border-focus: #D97706;
+
+  /* Tactile Inset Highlights */
+  --hardware-rim: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  --hardware-rim-subtle: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+  /* Typography & Monospace Colors */
+  --color-text-primary: #E6E0DD;
+  --color-text-secondary: #8C827A;
+  --color-text-tertiary: #5A514B;
+
+  /* Semantic Accents */
+  --color-emerald-fg: #4ADE80;
+  --color-emerald-bg: #143823;
+  --color-emerald-border: #1B4D31;
+
+  --color-crimson-fg: #F87171;
+  --color-crimson-bg: #381414;
+  --color-crimson-border: #521E1E;
+
+  --color-amber-fg: #FBBF24;
+  --color-amber-bg: #382A14;
+  --color-amber-border: #59421D;
+  --color-amber-glow: rgba(217, 119, 6, 0.08);
+}
+
+/* Base Body Styles */
+body {
+  background-color: #0D0A09;
+  color: #E6E0DD;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Ambient Canvas Depth Dot Grid (40% opacity) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(#2A211D 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Custom High-Contrast Text Selection */
+::selection {
+  background-color: #382A14;
+  color: #FBBF24;
+}
+
+/* Sub-pixel Hardware Grid Utility */
+.bg-hardware-grid {
+  background-image: radial-gradient(#2A211D 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Kinetic Border Glow Shimmer */
+@keyframes border-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-border-shimmer {
+  background-size: 200% 200%;
+  animation: border-shimmer 6s ease infinite;
+}
+
+/* Interactive Diff Accept Highlight Sweep */
+@keyframes sweep-highlight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-sweep {
+  animation: sweep-highlight 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Line-swipe Animation for Accepted Diffs */
+@keyframes line-swipe-pulse {
+  0% {
+    background-color: rgba(34, 197, 94, 0.35);
+  }
+  50% {
+    background-color: rgba(34, 197, 94, 0.15);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.animate-line-accepted {
+  animation: line-swipe-pulse 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Touch-optimized horizontal scrolling without visual scrollbar */
+.touch-scroll-clean {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.touch-scroll-clean::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dark Espresso Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0A09;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A211D;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5A514B;
+}
+
+/* Reduced Motion Safety */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

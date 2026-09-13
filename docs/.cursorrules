@@ -1,0 +1,65 @@
+# ContextForge Landing Page — Cursor & IDE Development Rules (.cursorrules)
+
+You are an expert Frontend Architect and Creative Technologist working on the official marketing and binary distribution website for ContextForge (contextforge.dev).
+
+---
+
+### 1. Technology Architecture & Conventions
+- Framework: Next.js 15+ (App Router, React 19, TypeScript)
+- Styling: Tailwind CSS (Strict Dark Espresso custom token configuration)
+- Animations: Framer Motion (micro-interactions, spring layouts, ambient cursor glow)
+- Icons: lucide-react
+- Package Manager: pnpm
+
+---
+
+### 2. Strict Design System & Palette Constraints
+NEVER output generic Tailwind gray/slate/zinc colors. Every component MUST use the Dark Espresso design tokens:
+- Base Canvas: #0D0A09 (bg-[#0D0A09])
+- Card Surface: #16110F (bg-[#16110F])
+- Active Wells / Inputs: #1E1714 (bg-[#1E1714])
+- Standard Borders: #2A211D (border-[#2A211D])
+- Hardware Inset Highlight: shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]
+- Primary Typography: #E6E0DD (text-[#E6E0DD])
+- Muted Metadata / Sub-copy: #8C827A (text-[#8C827A])
+- Semantic Emerald (Diff Additions / Online): #22C55E / bg-[#143823] / text-[#4ADE80]
+- Semantic Crimson (Diff Deletions / Abort): #EF4444 / bg-[#381414] / text-[#F87171]
+- Semantic Amber (Active Streaming / Queue): #D97706 / bg-[#382A14] / text-[#FBBF24]
+
+---
+
+### 3. Component Architecture & Server/Client Boundaries
+- Default to React Server Components (RSC) for marketing sections, hero text, bento descriptions, and legal content.
+- Use 'use client' ONLY for interactive islands:
+  * Dynamic OS Sniffing (`useOperatingSystem`)
+  * Interactive Hunk Diff Viewer (`InteractiveDiffViewer.tsx`)
+  * Time Machine Scrub Slider (`TimeMachineSlider.tsx`)
+  * Ambient Spotlight Cursor Glow (`SpotlightCard.tsx`)
+  * Sticky Header scroll listener (`Header.tsx`)
+- Prevent Hydration Mismatches:
+  * Never read `window`, `navigator`, or `localStorage` during initial server render.
+  * Execute OS detection inside `useEffect` post-mount; render a static, universal fallback CTA during SSR.
+
+---
+
+### 4. Code Quality & Type Safety
+- Strict TypeScript: Zero tolerance for `any`. Declare explicit interfaces in `src/types/index.ts` or component prop types.
+- Clean Imports: Use the `@/*` alias mapped to `./src/*`.
+- Asset Management: Binary file sizes, SHA-256 hashes, and download links MUST be imported from `@/data/releases.ts`, never hardcoded into JSX.
+
+---
+
+### 5. Product Positioning & Copywriting Rules
+- Proprietary Closed-Source Desktop SaaS: Never label ContextForge as "open-source" or link to public contributor docs.
+- Pricing Transparency: Prominently feature the Developer Free Forever ($0) BYOK model. Frame it as developer-first sovereign computing.
+- Zero Boilerplate: Prohibit "Lorem Ipsum" and generic buzzwords ("revolutionary", "game-changing"). Write concrete, engineering-accurate copy (e.g., "1-click pre-mutation snapshot rollback", "per-hunk diff inspector", "sub-50MB idle RAM").
+
+---
+
+### 6. Tactile UI & Hardware Aesthetics
+Every card, modal, or terminal mock must adhere to the milled hardware pattern:
+```tsx
+<div className="rounded-xl border border-[#2A211D] bg-[#16110F] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+  {/* Content */}
+</div>
+```
