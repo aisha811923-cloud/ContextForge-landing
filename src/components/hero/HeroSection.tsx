@@ -63,7 +63,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
             className="mx-auto mt-8 max-w-2xl font-sans text-base sm:text-lg lg:text-xl leading-relaxed text-[#8C827A]"
           >
-            Real-time Gemini token streaming, automated pre-mutation snapshots, and per-hunk diff inspection. Native desktop execution with zero cloud workspace storage.
+            BYOK Claude, OpenAI, Gemini, or local Ollama • Zero silent file rewrites. Automated pre-mutation snapshots and per-hunk diff inspection with zero cloud workspace storage.
           </motion.p>
 
           {/* Dynamic Hydration-Safe CTA */}
@@ -90,7 +90,7 @@ export function HeroSection() {
             <span className="hidden text-[#5A514B] sm:inline">•</span>
             <div className="flex items-center gap-2">
               <Key className="h-4 w-4 text-[#D97706]" />
-              <span>Bring Your Own Key (BYOK)</span>
+              <span>Universal BYOK + Offline Ollama</span>
             </div>
             <span className="hidden text-[#5A514B] sm:inline">•</span>
             <div className="flex items-center gap-2">

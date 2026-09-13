@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: '%s | ContextForge',
   },
   description:
-    'Proprietary native desktop AI architect with real-time Gemini streaming, Time Machine turn rollbacks, hunk-by-hunk diff inspection, and offline Ollama fallback. Zero cloud workspace retention.',
+    'Proprietary native desktop AI architect with Universal BYOK (Claude 3.7, GPT-4o, Gemini 2.5, DeepSeek R1), Time Machine turn rollbacks, hunk-by-hunk diff inspection, and offline Ollama local inference. Zero cloud workspace retention.',
   applicationName: 'ContextForge',
   authors: [{ name: 'ContextForge Systems', url: BASE_URL }],
   generator: 'Next.js',
@@ -39,7 +39,10 @@ export const metadata: Metadata = {
     'turn rollback',
     'offline LLM',
     'Ollama desktop tool',
-    'Gemini API coding assistant',
+    'universal BYOK',
+    'Claude 3.7 BYOK',
+    'OpenAI GPT-4o',
+    'DeepSeek R1 local',
     'BYOK developer tools',
     'Rust desktop editor',
     'non-blocking prompt queue',
@@ -68,7 +71,7 @@ export const metadata: Metadata = {
     siteName: 'ContextForge',
     title: 'ContextForge — The Local-First AI Agent That Never Overwrites Your Code',
     description:
-      'Native desktop AI workspace architect. Real-time Gemini streaming, automated pre-mutation snapshots, per-hunk diff review, and local Ollama fallback. 100% local workspace storage.',
+      'Native desktop AI workspace architect. Universal BYOK (Claude, OpenAI, Gemini, DeepSeek), automated pre-mutation snapshots, per-hunk diff review, and local Ollama inference. 100% local workspace storage.',
     images: [
       {
         url: '/og-preview.png',
@@ -83,7 +86,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ContextForge — Local-First AI Desktop Architect',
     description:
-      'Native desktop AI workspace architect. Real-time Gemini streaming, automated pre-mutation snapshots, per-hunk diff review, and local Ollama fallback. 100% local workspace storage.',
+      'Native desktop AI workspace architect. Universal BYOK (Claude, OpenAI, Gemini, DeepSeek), automated pre-mutation snapshots, per-hunk diff review, and local Ollama inference. 100% local workspace storage.',
     images: ['/og-preview.png'],
   },
   icons: {
@@ -111,7 +114,7 @@ const jsonLdSchema = {
     availability: 'https://schema.org/InStock',
   },
   description:
-    'Proprietary local-first AI workspace architect and code execution engine. Features non-blocking prompt queues, Time Machine turn snapshots, per-hunk diff inspection, and local Ollama offline fallback.',
+    'Proprietary local-first AI workspace architect and code execution engine. Features Universal BYOK (Claude, OpenAI, Gemini, DeepSeek), non-blocking prompt queues, Time Machine turn snapshots, per-hunk diff inspection, and local Ollama offline fallback.',
   softwareVersion: '0.1.0',
   fileSize: '15MB',
   releaseNotes: 'https://contextforge.dev/docs/CHANGELOG.md',
@@ -128,7 +131,7 @@ const jsonLdSchema = {
     'Hunk-by-Hunk Code Diff Inspector',
     'Persistent .contextforgerules Workspace Boundaries',
     'Sub-Millisecond Telemetry HUD (TTFT and tok/s)',
-    'Dual Cloud (Gemini) and Local Offline (Ollama) Bridge',
+    'Universal BYOK (Claude, OpenAI, Gemini, DeepSeek) & Local Offline Ollama Inference',
   ],
 };
 

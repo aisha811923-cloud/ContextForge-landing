@@ -11,8 +11,8 @@ export function PricingSection() {
     'Unlimited local project indexing',
     'Custom .contextforgerules enforcement',
     'Time Machine pre-mutation snapshot engine',
-    'Bring Your Own Key (BYOK) for Gemini API',
-    'Unlimited local offline inference via Ollama',
+    'Universal BYOK: Claude, OpenAI, Google Gemini, DeepSeek & Groq',
+    'Zero markup on tokens — pay providers directly at raw API cost or run free with Ollama',
     'Standalone native desktop binaries (Win, Mac, Linux)',
   ];
 

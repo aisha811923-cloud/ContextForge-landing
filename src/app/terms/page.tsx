@@ -82,7 +82,7 @@ export default function TermsPage() {
               3. Bring Your Own Key (BYOK) &amp; Third-Party API Usage
             </h2>
             <p className="mt-4 text-sm">
-              ContextForge provides direct integration bridges to third-party artificial intelligence inference providers, including Google Gemini and local Ollama runtimes. You are solely responsible for acquiring, managing, and securing your own API credentials, and you bear full financial liability for any API consumption fees or token charges incurred with third-party providers.
+              ContextForge provides direct integration bridges to third-party artificial intelligence inference providers, including Anthropic (Claude), OpenAI, Google Gemini, DeepSeek, Groq, custom OpenAI-compatible endpoints, and local Ollama runtimes. You are solely responsible for acquiring, managing, and securing your own API credentials, and you bear full financial liability for any API consumption fees or token charges incurred with third-party providers.
             </p>
           </section>
 

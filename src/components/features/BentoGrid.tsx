@@ -12,6 +12,7 @@ import {
   Radio,
   Layers,
   StopCircle,
+  Cpu,
 } from 'lucide-react';
 
 const containerVariants = {
@@ -167,20 +168,33 @@ export function BentoGrid() {
             </FeatureCard>
           </motion.div>
 
-          {/* Pillar 6: Dual Inference Engine */}
+          {/* Pillar 6: Multi-Provider Inference Engine */}
           <motion.div variants={itemVariants}>
             <FeatureCard
               pillarNumber={6}
-              title="Dual Inference Engine"
-              headline="Cloud Throughput. Local Fallback."
-              description="Stream with Gemini API for ultra-low latency, with automatic zero-crash fallback to local Ollama instances when internet connectivity drops."
-              icon={<Radio className="h-5 w-5 text-[#E6E0DD]" />}
-              badgeText="Gemini + Ollama"
+              title="Any Model. Cloud or Air-Gapped."
+              headline="MULTI-PROVIDER INFERENCE"
+              description="Connect your own API keys for Claude 3.7 Sonnet, OpenAI o3/GPT-4o, Google Gemini 2.5, DeepSeek R1, or any custom OpenAI-compatible base URL. Switch to Ollama for 100% offline, zero-telemetry local inference when security demands it."
+              icon={<Cpu className="h-5 w-5 text-[#4ADE80]" />}
+              badgeText="Universal BYOK"
               badgeColor="emerald"
             >
-              <div className="flex items-center justify-between rounded-lg border border-[#2A211D] bg-[#0D0A09] px-3.5 py-2.5 font-mono text-xs tabular-nums">
-                <span className="text-[#8C827A]">Offline Bridge:</span>
-                <span className="text-[#E6E0DD] font-semibold">localhost:11434</span>
+              <div className="space-y-3">
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {['Claude', 'OpenAI', 'Gemini', 'DeepSeek', 'Ollama', 'Custom Base URL'].map((provider) => (
+                    <span
+                      key={provider}
+                      className="inline-flex items-center rounded-md border border-[#2A211D] bg-[#0D0A09] px-2.5 py-1 font-mono text-[11px] font-medium text-[#E6E0DD] shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] hover:border-[#D97706]/40 transition-colors"
+                    >
+                      <span className="mr-1.5 h-1.5 w-1.5 rounded-full bg-[#22C55E]" />
+                      {provider}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex items-center justify-between rounded-lg border border-[#2A211D] bg-[#0D0A09] px-3.5 py-2 font-mono text-xs tabular-nums">
+                  <span className="text-[#8C827A]">Offline Bridge:</span>
+                  <span className="text-[#4ADE80] font-semibold">localhost:11434 (Ollama)</span>
+                </div>
               </div>
             </FeatureCard>
           </motion.div>

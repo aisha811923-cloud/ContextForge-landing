@@ -65,7 +65,7 @@ export function SpotlightPreview() {
               <Shield className="h-3 w-3 text-[#22C55E]" />
               <span>Workspace: ~/core-api (14 files indexed)</span>
             </div>
-            <span className="text-[#4ADE80] font-medium">Gemini 2.0 Streaming</span>
+            <span className="text-[#4ADE80] font-medium">Multi-Model BYOK Streaming</span>
           </div>
 
           {/* Action Suggestions List */}

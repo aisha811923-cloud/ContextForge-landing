@@ -9,24 +9,38 @@ export const FAQ_ITEMS: FAQItemData[] = [
     category: 'Architecture',
   },
   {
+    id: 'supported-models-providers',
+    question: 'Which LLMs and model providers are supported?',
+    answer:
+      'ContextForge connects to any leading provider via Bring-Your-Own-Key (BYOK): Anthropic (Claude 3.5/3.7), OpenAI (GPT-4o, o-series), Google (Gemini 1.5/2.0), DeepSeek, and Groq. You can also specify any custom OpenAI-compatible base URL (vLLM, LM Studio, LocalAI) or route directly to a local Ollama instance running on localhost.',
+    category: 'Features',
+  },
+  {
+    id: 'api-keys-security',
+    question: 'Are my API keys sent to ContextForge servers?',
+    answer:
+      "Never. ContextForge has no backend server or proxy. Your API credentials are encrypted with your operating system's native keychain (Windows Credential Manager, macOS Keychain, Linux Secret Service) and stream directly from your machine to the provider's official endpoints via TLS 1.3.",
+    category: 'Security & Privacy',
+  },
+  {
     id: 'where-source-code-goes',
     question: 'Where does my source code go when I use ContextForge?',
     answer:
-      'Your source code remains entirely on your machine. Workspace indices, AST caches, file snapshots, and .contextforgerules are stored solely on your local filesystem. When you submit a prompt, the required context is sent directly over an encrypted TLS connection from your device to Google Cloud endpoints using your personal Gemini API key. If you run local models via Ollama, context never leaves localhost:11434—zero internet traffic is generated.',
+      'Your source code remains entirely on your machine. Workspace indices, AST caches, file snapshots, and .contextforgerules are stored solely on your local filesystem. When you submit a prompt, the required context is sent directly over an encrypted TLS connection from your device to the official API endpoints of your selected provider (Anthropic, OpenAI, Google, DeepSeek, Groq). If you run local models via Ollama or custom local runtimes, context never leaves localhost:11434—zero internet traffic is generated.',
     category: 'Security & Privacy',
   },
   {
     id: 'byok-model',
     question: 'How does the Bring-Your-Own-Key (BYOK) model work?',
     answer:
-      "ContextForge does not charge markup, middleman tokens, or monthly subscriptions on model inference. You supply your own Google Gemini API key, which is stored in your operating system's native credential vault (Windows Credential Manager, macOS Keychain, or Linux Secret Service API). API requests are dispatched straight from your desktop client to Google.",
+      "ContextForge does not charge markup, middleman tokens, or monthly subscriptions on model inference. You supply your own API keys for Claude, OpenAI, Google Gemini, DeepSeek, Groq, or custom endpoints. Credentials are encrypted and stored in your operating system's native credential vault (Windows Credential Manager, macOS Keychain, or Linux Secret Service API). API requests are dispatched straight from your desktop client to the provider's official endpoints.",
     category: 'Billing & Pricing',
   },
   {
     id: 'ollama-requirement',
     question: 'Do I need Ollama installed to use ContextForge?',
     answer:
-      'No. Ollama is completely optional. ContextForge is engineered with a dual-inference bridge: cloud streaming via Google Gemini is the default configuration. If you install Ollama (localhost:11434), ContextForge automatically detects running local models and allows you to switch seamlessly between cloud and local offline inference.',
+      'No. Ollama is completely optional. ContextForge is engineered with a dual-inference bridge: cloud streaming via leading providers (Claude, OpenAI, Gemini, DeepSeek) is supported out of the box. If you install Ollama (localhost:11434), ContextForge automatically detects running local models and allows you to switch seamlessly to 100% offline, zero-telemetry local inference when security demands it.',
     category: 'Architecture',
   },
   {

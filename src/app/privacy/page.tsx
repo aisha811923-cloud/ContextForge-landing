@@ -76,9 +76,9 @@ export default function PrivacyPage() {
             </h2>
             <div className="mt-4 space-y-4">
               <div>
-                <h3 className="font-sans text-base font-semibold text-[#E6E0DD]">3.1 Google Gemini API</h3>
+                <h3 className="font-sans text-base font-semibold text-[#E6E0DD]">3.1 Cloud Model Providers (Anthropic, OpenAI, Google, DeepSeek, Groq)</h3>
                 <p className="mt-1 text-sm">
-                  When utilizing Google Gemini, your desktop client communicates directly with Google Cloud endpoints (<code className="font-mono text-[#FBBF24]">generativelanguage.googleapis.com</code>) via TLS 1.3. Traffic never routes through an intermediate ContextForge proxy server. Your API keys are encrypted at rest using your host operating system native credential vault.
+                  When utilizing cloud model providers, your desktop client communicates directly with each provider&apos;s official endpoints (e.g., Anthropic, OpenAI, Google Cloud, DeepSeek, Groq, or your designated OpenAI-compatible endpoint) via TLS 1.3. Traffic never routes through an intermediate ContextForge proxy or middleware server. Your API credentials are encrypted at rest using your host operating system native credential vault (Windows Credential Manager, macOS Keychain, Linux Secret Service).
                 </p>
               </div>
 

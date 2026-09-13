@@ -45,8 +45,13 @@ export function HeroMockup() {
             </span>
           </div>
 
-          {/* Center: Active Turn Status */}
-          <div className="hidden items-center gap-2 font-mono text-xs text-[#8C827A] lg:flex">
+          {/* Center: Active Turn Status & Model */}
+          <div className="hidden items-center gap-2.5 font-mono text-xs text-[#8C827A] lg:flex">
+            <span className="inline-flex items-center gap-1.5 rounded-md border border-[#2A211D] bg-[#1E1714] px-2.5 py-0.5 text-[11px] text-[#E6E0DD]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#D97706]" />
+              <span className="text-[#8C827A]">Model:</span>
+              <span className="font-semibold text-[#E6E0DD]">BYOK Active [Claude • Gemini • DeepSeek]</span>
+            </span>
             <span className="text-[#5A514B]">turn:</span>
             <span className="rounded bg-[#1E1714] px-2 py-0.5 text-[#E6E0DD] font-semibold border border-[#2A211D]">
               #3 (in-flight)
@@ -105,7 +110,7 @@ export function HeroMockup() {
             <div className="space-y-2 rounded-xl border border-[#2A211D]/80 bg-[#0D0A09] p-4 sm:p-5 text-[12px] overflow-hidden">
               <div className="flex flex-wrap items-center gap-2 text-[#8C827A]">
                 <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#FBBF24]" />
-                <span className="font-semibold text-[#E6E0DD]">Gemini API (Streaming):</span>
+                <span className="font-semibold text-[#E6E0DD]">Active Engine: Claude 3.7 / Ollama Local (Dual Engine):</span>
                 <span className="text-[11px] text-[#5A514B]">TTFT 14.8ms • Zero Cloud Storage</span>
               </div>
 
