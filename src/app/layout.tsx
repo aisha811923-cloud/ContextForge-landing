@@ -74,10 +74,10 @@ export const metadata: Metadata = {
       'Native desktop AI workspace architect. Universal BYOK (Claude, OpenAI, Gemini, DeepSeek), automated pre-mutation snapshots, per-hunk diff review, and local Ollama inference. 100% local workspace storage.',
     images: [
       {
-        url: '/og-preview.png',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'ContextForge — Dark Espresso Desktop AI Workspace Architect Mockup',
+        alt: 'ContextForge - Local-First AI Workspace',
         type: 'image/png',
       },
     ],
@@ -87,10 +87,11 @@ export const metadata: Metadata = {
     title: 'ContextForge — Local-First AI Desktop Architect',
     description:
       'Native desktop AI workspace architect. Universal BYOK (Claude, OpenAI, Gemini, DeepSeek), automated pre-mutation snapshots, per-hunk diff review, and local Ollama inference. 100% local workspace storage.',
-    images: ['/og-preview.png'],
+    images: ['/opengraph-image'],
   },
   icons: {
     icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
       { url: '/favicon.ico', sizes: '32x32' },
       { url: '/icons/icon-192.png', type: 'image/png', sizes: '192x192' },
       { url: '/icons/icon-512.png', type: 'image/png', sizes: '512x512' },

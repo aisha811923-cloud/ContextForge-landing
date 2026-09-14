@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none">
+  <!-- Dark Espresso Surface with 1px hardware rim border -->
+  <rect x="0.5" y="0.5" width="31" height="31" rx="6" fill="#16110F" stroke="#2A211D" stroke-width="1" />
+  
+  <!-- Left Dual-Bracket (Amber) -->
+  <path d="M8.5 11L6 16L8.5 21" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Right Dual-Bracket (Amber) -->
+  <path d="M23.5 11L26 16L23.5 21" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Central Anvil Forge Core (Amber) -->
+  <path d="M11 13.5H21M13 13.5V18.5M19 13.5V18.5M10.5 18.5H21.5" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Emerald Status Spark Dot with glow halo -->
+  <circle cx="21" cy="9.5" r="3" fill="#22C55E" fill-opacity="0.25" />
+  <circle cx="21" cy="9.5" r="1.5" fill="#22C55E" />
+</svg>

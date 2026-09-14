@@ -115,6 +115,7 @@ export function PlatformCard({
             data-testid="copy-sha256"
             onClick={() => copyHash(asset.sha256)}
             title="Click to copy SHA-256 hash"
+            aria-label={`Copy SHA-256 hash for ${asset.fileName}`}
             className="group flex min-h-[44px] w-full items-center justify-between gap-3 rounded-xl border border-[#2A211D] bg-[#0D0A09] px-3.5 py-2.5 font-mono text-xs tabular-nums transition-all hover:border-[#8C827A]/60 hover:bg-[#1E1714] active:scale-[0.99]"
           >
             <span className="truncate text-left text-[#8C827A] group-hover:text-[#E6E0DD] font-mono text-[11px] sm:text-xs">
@@ -144,6 +145,8 @@ export function PlatformCard({
           <button
             type="button"
             onClick={() => setShowInstallCommand(!showInstallCommand)}
+            aria-label="Toggle one-line terminal install command"
+            aria-expanded={showInstallCommand}
             className="flex w-full items-center justify-between font-mono text-xs text-[#8C827A] hover:text-[#E6E0DD] transition-colors"
           >
             <div className="flex items-center gap-2">
@@ -167,6 +170,7 @@ export function PlatformCard({
                 onClick={() => copyInstall(asset.installCommand!)}
                 className="absolute right-2.5 top-2.5 rounded-lg p-1.5 text-[#8C827A] hover:bg-[#1E1714] hover:text-[#E6E0DD] transition-colors"
                 title="Copy Terminal Command"
+                aria-label="Copy terminal install command"
               >
                 {copiedInstall ? (
                   <Check className="h-3.5 w-3.5 text-[#4ADE80]" />

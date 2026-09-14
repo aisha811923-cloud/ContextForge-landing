@@ -1,0 +1,9 @@
+# ContextForge
+> The local-first AI workspace desktop application built on Tauri v2 (Rust).
+
+## Core Architecture
+- Desktop Binary: Built with Rust + Tauri v2 (Windows, macOS, Linux).
+- Inference: Universal BYOK supporting Anthropic Claude, OpenAI, Google Gemini, DeepSeek, and offline localhost Ollama.
+- Guardrails: Non-blocking prompt queue, pre-mutation Time Machine disk snapshots, and per-hunk diff inspection.
+- Privacy: 100% local workspace code. Zero telemetry. Zero remote workspace indexing.
+- Distribution: Standalone releases hosted via GitHub Releases.
